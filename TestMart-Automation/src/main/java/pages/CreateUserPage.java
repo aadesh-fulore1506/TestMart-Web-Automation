@@ -7,14 +7,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class CreateAccountPage {
+public class CreateUserPage {
 
 private final	WebDriver driver ;
 
-public CreateAccountPage(WebDriver driver) {
+public CreateUserPage(WebDriver driver) {
 	this.driver = driver ;
 	PageFactory.initElements(driver, this);
 }
+
+@FindBy(id = "page-title")
+private WebElement pageTitle;
 
 @FindBy(id = "firstName")
 private WebElement firstName;
@@ -64,7 +67,7 @@ private WebElement registerButton;
 @FindBy(xpath="(//a[text()='Create account'])[2]")
 private WebElement createAccount ;
 
-@FindBy(id = "register-message")
+@FindBy(css = ".alert-success")
 private WebElement registerMessage;
 
 @FindBy(id = "user-menu-label")
@@ -73,9 +76,16 @@ private WebElement userMenuLabel;
 @FindBy(xpath = "//a[text()='Log in']")
 private WebElement loginLink;
 
+public WebElement pageTitle() {
+	return pageTitle ;
+}
 
-public void gotoCreateAccountPage() {
+public void gotoCreateUserPage() {
 	createAccount.click();
+}
+
+public boolean registerMessageIsDisplayed() {
+	return registerMessage.isDisplayed();
 }
 	
 public void registerUser() {
@@ -106,7 +116,7 @@ public void registerUser() {
 }
 
 public String getUsername() {
- String createdMessage =	registerMessage.getText();
+ String createdMessage =registerMessage.getText();
  String username = createdMessage.split("is")[1].split("\\.")[0].trim();
  return username ;
 }

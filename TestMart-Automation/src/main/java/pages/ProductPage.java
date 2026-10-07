@@ -38,9 +38,19 @@ public class ProductPage {
 	@FindBy(css=".btn-secondary.btn-sm.prod-page")
 	private List<WebElement> pages;
 
+	@FindBy(id="cart-link")
+	private WebElement cart;
+
+	@FindBy(id="cart-count")
+	private WebElement cartCount;
 	
 	public int getProductCount() {
 	    return productNames.size();
+	}
+	
+	public int cartCount() {
+		int count =Integer.parseInt( cartCount.getText());
+		return count ;
 	}
 
 	public String getProductName(int index) {
@@ -55,7 +65,7 @@ public class ProductPage {
 	    nextButton.click();
 
 	}
-	public void addProductsByName(String[] productnames) {
+	public void addProductsByName(List<String> productnames) {
 		 int k =0 ;
 		for(int page=0; page<pages.size();page++) {
 			
@@ -63,19 +73,19 @@ public class ProductPage {
 				
 				String name = productNames.get(product).getText();
 				
-				if(Arrays.asList(productnames).equals(name)) {
+				if(Arrays.asList(productnames).contains(name)) {
 					
 				WebElement addCartButton = addToCartButtons.get(product) ;
 					 wait.waitForElementToBeClickable(addCartButton);
 					 addCartButton.click();
 					 k++ ;
 					 
-					 if( k == productnames.length ) {
+					 if( k == productnames.size() ) {
 						 break ;
 				}
 			}
 		}
-			 if( k == productnames.length ) {
+			 if( k == productnames.size() ) {
 				 break ;
 	}
 	
@@ -85,6 +95,10 @@ public class ProductPage {
 
 		public void waitForSuccessCartMessageToDisappear() {
 			wait.waitForInvisibilityOfAllElements(successMsg);
+		}
+		
+		public void gotoCartPage() {
+			cart.click();
 		}
 	}
 

@@ -25,6 +25,11 @@ private WebElement userCreatedSucessMessage ;
 @FindBy(css="#toast-container")
 private WebElement loginSuccessMessage ;
 
+@FindBy(css="#toast-container")
+private WebElement coupenAppliedMessage ;
+
+@FindBy(css=".toast-success")
+private WebElement orderConfirmation ;
 public void waitForElementToBeClickable(WebElement findby) {
 	wait.until(ExpectedConditions.elementToBeClickable(findby));
 }
@@ -50,4 +55,15 @@ public void loginSuccessMessage() {
 	waitForVisible(loginSuccessMessage);
 	waitForInvisible(loginSuccessMessage);
 }
+
+public void waitForCoupenAppliedMessage() {
+	waitForVisible(coupenAppliedMessage);
+	waitForInvisible(coupenAppliedMessage);
 }
+
+public void waitForOrderConfirmationMessage() {
+	waitForVisible(orderConfirmation);
+	waitForInvisible(orderConfirmation);
+}
+}
+

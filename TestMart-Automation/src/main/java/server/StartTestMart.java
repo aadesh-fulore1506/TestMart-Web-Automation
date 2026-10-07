@@ -1,4 +1,4 @@
-package com.testmart.utils;
+package server;
 
 public class StartTestMart {
     public static void main(String[] args) {
