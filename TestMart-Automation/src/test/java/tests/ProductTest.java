@@ -23,12 +23,10 @@ public class ProductTest extends TestMartBaseTest {
 	
 	@Test(description = "Add Products To Cart By ProductName")
 	public void addProducts() {
-	
-	
 		productPage.addProductsByName(page.productList());
 		productPage.waitForSuccessCartMessageToDisappear();
 		int cartCount = productPage.cartCount();
-		Assert.assertEquals(cartCount,page.productList() );
+		Assert.assertEquals(cartCount,page.productList().size() );
 	}
 	
 	

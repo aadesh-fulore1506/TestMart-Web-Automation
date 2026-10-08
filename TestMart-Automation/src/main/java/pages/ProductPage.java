@@ -32,7 +32,7 @@ public class ProductPage {
 	@FindBy(id = "prod-next")
 	private WebElement nextButton;
 
-	@FindBy(css = ".toast-success")
+	@FindBy(css = "div[data-testid='toast-container']")
 	private WebElement successMsg;
 	
 	@FindBy(css=".btn-secondary.btn-sm.prod-page")
@@ -63,35 +63,38 @@ public class ProductPage {
 
 	public void clickNextButton() {
 	    nextButton.click();
+	}
 
-	}
-	public void addProductsByName(List<String> productnames) {
-		 int k =0 ;
-		for(int page=0; page<pages.size();page++) {
-			
-			for (int product=0; product <productNames.size();product++) {
-				
-				String name = productNames.get(product).getText();
-				
-				if(Arrays.asList(productnames).contains(name)) {
-					
-				WebElement addCartButton = addToCartButtons.get(product) ;
-					 wait.waitForElementToBeClickable(addCartButton);
-					 addCartButton.click();
-					 k++ ;
-					 
-					 if( k == productnames.size() ) {
-						 break ;
-				}
-			}
-		}
-			 if( k == productnames.size() ) {
-				 break ;
-	}
-	
-			 nextButton.click();
-}
-	}
+	    public void addProductsByName(List<String> productNamesToAdd) {
+
+	        int addedProducts = 0;
+
+	        for (int page = 0; page < pages.size(); page++) {
+
+	            for (int product = 0; product < productNames.size(); product++) {
+
+	                String name = productNames.get(product).getText().trim();
+
+	                if (productNamesToAdd.contains(name)) {
+
+	                    WebElement addCartButton = addToCartButtons.get(product);
+
+	                    wait.waitForElementToBeClickable(addCartButton);
+	                    addCartButton.click();
+
+	                    addedProducts++;
+
+	                    if (addedProducts == productNamesToAdd.size()) {
+	                        return;
+	                    }
+	                }
+	            }
+
+	            // Move to next page only if required
+	            wait.waitForElementToBeClickable(nextButton);
+	            nextButton.click();
+	        }
+	    }
 
 		public void waitForSuccessCartMessageToDisappear() {
 			wait.waitForInvisibilityOfAllElements(successMsg);

@@ -12,12 +12,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
+import utils.WaitUtils;
+
 public class CartPage {
 
 	WebDriver driver;
+	WaitUtils wait ;
 
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WaitUtils(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -103,6 +107,10 @@ public class CartPage {
 		String code = couponCode.getAttribute("placeholder");
 		couponCode.sendKeys(code);
 		applyCoupon.click();
+		wait.waitForVisible(successCouponMessage);
+		
+		
+		
 	}
 
 	public double lineTotal() {

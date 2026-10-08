@@ -1,27 +1,31 @@
 package tests;
 
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import base.TestMartBaseTest;
-import pages.CreateUserPage;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.WaitUtils;
 
-public class LoginTest extends TestMartBaseTest {
+public class LoginTest extends BaseTest {
 
 	protected LoginPage loginPage ;
+	
 	@BeforeMethod()
 	public void openLoginPage() {
-		loginPage = new LoginPage(getDriver());
+		
 		HomePage page = new HomePage(getDriver());
 		page.gotoLogIn();
+		loginPage = new LoginPage(getDriver());
 	}
 	
 	@Test(description ="Login With Correct Credentials")
 	public void loginWithCorrectCredentials() {
-		loginPage.login();
+		loginPage.loginWithValidCredentials();
 		Assert.assertTrue(loginPage.loginSuccessFully());
 	}
 	

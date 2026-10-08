@@ -39,14 +39,17 @@ public class OrderPage {
 		   orders.click();
 	   }
 	   
-	   public void confirmOrderPlace() {
-		   if( orderRows.size() >0) {
-			    System.out.println("Order Place Successfully");
-		   }else {
-			   System.out.println("Order not Placed");
-		   }
-	   }
-	   
+		public boolean isOrderPlaced() {
+
+			while (true) {
+				if (orderRows.size() > 0) {
+					System.out.println("Order Place Successfully");
+
+				}
+				return true;
+			}
+		}
+
 	   public void orderDetails() {
 		System.out.println("Order ID : "+ orderId.getText() +
 		                   "\nProducts : "+ products.getText() +

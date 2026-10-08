@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CreateUserTest">
+      <class name="tests.OrderConfirmationTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="login"/>
-          <include name="openCreateUserTest"/>
-          <include name="verifyCreateUserPage"/>
-          <include name="startServer"/>
+          <include name="openOrderPage"/>
+          <include name="verifyOrderIsPlaced"/>
         </methods>
-      </class> <!-- tests.CreateUserTest -->
+      </class> <!-- tests.OrderConfirmationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

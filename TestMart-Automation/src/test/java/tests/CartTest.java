@@ -20,9 +20,12 @@ public class CartTest extends TestMartBaseTest {
 	public void openCartPage() {
 		cart = new CartPage(getDriver());
 		page = new HomePage(getDriver());
+		page.gotoProductPage();
 		ProductPage product = new ProductPage(getDriver());
 		product.addProductsByName(page.productList());
+		product.waitForSuccessCartMessageToDisappear();
 		page.gotoCartPage();
+		
 	}
 	
 	@Test()

@@ -2,16 +2,17 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="TestMart Suite" thread-count="5">
+<suite name="TestMart Suite" parallel="classes" thread-count="5">
 
     <test name="TestMart Tests">
 
         <classes>
-
+                <class name="tests.CreateUserTest"/>
             <class name="tests.LoginTest"/>
             <class name="tests.ProductTest"/>
             <class name="tests.CartTest"/>
             <class name="tests.CheckoutTest"/>
+                <class name="tests.OrderConfirmationTest"/>
             
 
         </classes>

@@ -1,17 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-07T17:05:18 IST" name="TestMart Suite" finished-at="2026-10-07T17:05:18 IST" duration-ms="14">
+  <suite started-at="2026-10-08T13:46:28 IST" name="TestMart Suite" finished-at="2026-10-08T13:47:57 IST" duration-ms="89213">
     <groups>
     </groups>
-    <test started-at="2026-10-07T17:05:18 IST" name="TestMart Tests" finished-at="2026-10-07T17:05:18 IST" duration-ms="14">
+    <test started-at="2026-10-08T13:46:28 IST" name="TestMart Tests" finished-at="2026-10-08T13:47:57 IST" duration-ms="89213">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:tests.LoginTest@cd1e646]" started-at="2026-10-07T17:05:18 IST" name="startServer" finished-at="2026-10-07T17:05:18 IST" duration-ms="72" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:28 IST" name="setUp" finished-at="2026-10-08T13:46:34 IST" duration-ms="5786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startServer -->
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:34 IST" name="openLoginPage" finished-at="2026-10-08T13:46:35 IST" duration-ms="998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginWithCorrectCredentials()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:35 IST" name="loginWithCorrectCredentials" description="Login With Correct Credentials" finished-at="2026-10-08T13:46:36 IST" duration-ms="1870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithCorrectCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:36 IST" name="tearDown" finished-at="2026-10-08T13:46:38 IST" duration-ms="1904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:38 IST" name="setUp" finished-at="2026-10-08T13:46:40 IST" duration-ms="1675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openLoginPage()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:40 IST" name="openLoginPage" finished-at="2026-10-08T13:46:40 IST" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLoginPage -->
+        <test-method signature="loginWithInvalidCredentials()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:40 IST" name="loginWithInvalidCredentials" description="Login With Invalid Credentials" finished-at="2026-10-08T13:46:51 IST" duration-ms="10468" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (c4da1938dc2fde9bf37b7c99a6fb1939)] -> css selector: #toast-container] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.98, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Aadesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63387}, goog:processID: 12676, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63387/devtoo..., se:cdpVersion: 154.0.8037.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4da1938dc2fde9bf37b7c99a6fb1939]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (c4da1938dc2fde9bf37b7c99a6fb1939)] -> css selector: #toast-container] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.98, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\Aadesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63387}, goog:processID: 12676, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63387/devtoo..., se:cdpVersion: 154.0.8037.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4da1938dc2fde9bf37b7c99a6fb1939
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utils.WaitUtils.waitForVisible(WaitUtils.java:42)
+at pages.LoginPage.loginSuccessFully(LoginPage.java:79)
+at tests.LoginTest.loginWithInvalidCredentials(LoginTest.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5dda768f]" started-at="2026-10-08T13:46:51 IST" name="tearDown" finished-at="2026-10-08T13:46:52 IST" duration-ms="1146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
+      <class name="tests.CreateUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:28 IST" name="setUp" finished-at="2026-10-08T13:46:34 IST" duration-ms="5913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openCreateUserTest()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:34 IST" name="openCreateUserTest" finished-at="2026-10-08T13:46:35 IST" duration-ms="1054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCreateUserTest -->
+        <test-method signature="registerNewUser()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:35 IST" name="registerNewUser" description="register New User" finished-at="2026-10-08T13:46:41 IST" duration-ms="6422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:41 IST" name="tearDown" finished-at="2026-10-08T13:46:48 IST" duration-ms="6920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:48 IST" name="setUp" finished-at="2026-10-08T13:46:50 IST" duration-ms="2257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openCreateUserTest()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:50 IST" name="openCreateUserTest" finished-at="2026-10-08T13:46:51 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCreateUserTest -->
+        <test-method signature="verifyCreateUserPage()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:51 IST" name="verifyCreateUserPage" description="Verify Create User Page Is Displayed" finished-at="2026-10-08T13:46:51 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateUserPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateUserTest@45752059]" started-at="2026-10-08T13:46:51 IST" name="tearDown" finished-at="2026-10-08T13:46:52 IST" duration-ms="1045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CreateUserTest -->
+      <class name="tests.CartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:46:28 IST" name="setUp" finished-at="2026-10-08T13:46:34 IST" duration-ms="5894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:46:34 IST" name="login" finished-at="2026-10-08T13:46:40 IST" duration-ms="6453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCartPage()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:46:40 IST" name="openCartPage" finished-at="2026-10-08T13:46:53 IST" duration-ms="12896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartPage -->
+        <test-method signature="applyCoupon()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:46:53 IST" name="applyCoupon" finished-at="2026-10-08T13:47:00 IST" duration-ms="6669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyCoupon -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:00 IST" name="tearDown" finished-at="2026-10-08T13:47:03 IST" duration-ms="3588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:03 IST" name="setUp" finished-at="2026-10-08T13:47:05 IST" duration-ms="1573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:05 IST" name="login" finished-at="2026-10-08T13:47:11 IST" duration-ms="5849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCartPage()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:11 IST" name="openCartPage" finished-at="2026-10-08T13:47:20 IST" duration-ms="9332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartPage -->
+        <test-method signature="increaseItemQuantity()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:20 IST" name="increaseItemQuantity" finished-at="2026-10-08T13:47:22 IST" duration-ms="2038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- increaseItemQuantity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:22 IST" name="tearDown" finished-at="2026-10-08T13:47:22 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:22 IST" name="setUp" finished-at="2026-10-08T13:47:24 IST" duration-ms="1491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:24 IST" name="login" finished-at="2026-10-08T13:47:29 IST" duration-ms="5256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCartPage()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:29 IST" name="openCartPage" finished-at="2026-10-08T13:47:37 IST" duration-ms="8398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartPage -->
+        <test-method signature="verifyCartProducts()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:37 IST" name="verifyCartProducts" finished-at="2026-10-08T13:47:37 IST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:37 IST" name="tearDown" finished-at="2026-10-08T13:47:38 IST" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:38 IST" name="setUp" finished-at="2026-10-08T13:47:39 IST" duration-ms="1202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:39 IST" name="login" finished-at="2026-10-08T13:47:44 IST" duration-ms="5220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCartPage()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:44 IST" name="openCartPage" finished-at="2026-10-08T13:47:52 IST" duration-ms="8147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartPage -->
+        <test-method signature="verifyGrandTotalAfterCouponApplied()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:52 IST" name="verifyGrandTotalAfterCouponApplied" finished-at="2026-10-08T13:47:57 IST" duration-ms="4534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrandTotalAfterCouponApplied -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CartTest@1f81aa00]" started-at="2026-10-08T13:47:57 IST" name="tearDown" finished-at="2026-10-08T13:47:57 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.ProductTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ProductTest@51c693d]" started-at="2026-10-08T13:46:28 IST" name="setUp" finished-at="2026-10-08T13:46:34 IST" duration-ms="6561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.ProductTest@51c693d]" started-at="2026-10-08T13:46:34 IST" name="login" finished-at="2026-10-08T13:46:41 IST" duration-ms="6340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openProductPage()[pri:0, instance:tests.ProductTest@51c693d]" started-at="2026-10-08T13:46:41 IST" name="openProductPage" finished-at="2026-10-08T13:46:41 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openProductPage -->
+        <test-method signature="addProducts()[pri:0, instance:tests.ProductTest@51c693d]" started-at="2026-10-08T13:46:41 IST" name="addProducts" description="Add Products To Cart By ProductName" finished-at="2026-10-08T13:46:53 IST" duration-ms="12698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductTest@51c693d]" started-at="2026-10-08T13:46:54 IST" name="tearDown" finished-at="2026-10-08T13:46:55 IST" duration-ms="1607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ProductTest -->
+      <class name="tests.OrderConfirmationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.OrderConfirmationTest@1863d2fe]" started-at="2026-10-08T13:46:52 IST" name="setUp" finished-at="2026-10-08T13:46:53 IST" duration-ms="1799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.OrderConfirmationTest@1863d2fe]" started-at="2026-10-08T13:46:53 IST" name="login" finished-at="2026-10-08T13:47:00 IST" duration-ms="6189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openOrderPage()[pri:0, instance:tests.OrderConfirmationTest@1863d2fe]" started-at="2026-10-08T13:47:00 IST" name="openOrderPage" finished-at="2026-10-08T13:47:25 IST" duration-ms="24927" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openOrderPage -->
+        <test-method signature="verifyOrderIsPlaced()[pri:0, instance:tests.OrderConfirmationTest@1863d2fe]" started-at="2026-10-08T13:47:25 IST" name="verifyOrderIsPlaced" finished-at="2026-10-08T13:47:25 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderIsPlaced -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.OrderConfirmationTest@1863d2fe]" started-at="2026-10-08T13:47:25 IST" name="tearDown" finished-at="2026-10-08T13:47:25 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.OrderConfirmationTest -->
+      <class name="tests.CheckoutTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:28 IST" name="setUp" finished-at="2026-10-08T13:46:34 IST" duration-ms="6097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:34 IST" name="login" finished-at="2026-10-08T13:46:40 IST" duration-ms="6029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCheckoutPage()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:40 IST" name="openCheckoutPage" finished-at="2026-10-08T13:46:56 IST" duration-ms="16167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCheckoutPage -->
+        <test-method signature="placeOrder()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:56 IST" name="placeOrder" finished-at="2026-10-08T13:46:57 IST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:57 IST" name="tearDown" finished-at="2026-10-08T13:46:57 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:57 IST" name="setUp" finished-at="2026-10-08T13:46:59 IST" duration-ms="2327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:46:59 IST" name="login" finished-at="2026-10-08T13:47:06 IST" duration-ms="6409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCheckoutPage()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:06 IST" name="openCheckoutPage" finished-at="2026-10-08T13:47:18 IST" duration-ms="12387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCheckoutPage -->
+        <test-method signature="reviewOrder()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:18 IST" name="reviewOrder" finished-at="2026-10-08T13:47:19 IST" duration-ms="653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reviewOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:19 IST" name="tearDown" finished-at="2026-10-08T13:47:19 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:19 IST" name="setUp" finished-at="2026-10-08T13:47:20 IST" duration-ms="1538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:20 IST" name="login" finished-at="2026-10-08T13:47:26 IST" duration-ms="5390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="openCheckoutPage()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:26 IST" name="openCheckoutPage" finished-at="2026-10-08T13:47:36 IST" duration-ms="10173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCheckoutPage -->
+        <test-method signature="verifyCehckoutPageIsDisplayed()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:36 IST" name="verifyCehckoutPageIsDisplayed" finished-at="2026-10-08T13:47:36 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCehckoutPageIsDisplayed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@6b6776cb]" started-at="2026-10-08T13:47:36 IST" name="tearDown" finished-at="2026-10-08T13:47:36 IST" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CheckoutTest -->
     </test> <!-- TestMart Tests -->
   </suite> <!-- TestMart Suite -->
 </testng-results>

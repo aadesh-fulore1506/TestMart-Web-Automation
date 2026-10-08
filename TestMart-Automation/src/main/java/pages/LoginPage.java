@@ -8,12 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.WaitUtils;
+
 
 public class LoginPage {
 
 	private final WebDriver driver ;
+	WaitUtils wait ;
 	public LoginPage(WebDriver driver) {
 		this.driver = driver ;
+		this.wait = new WaitUtils(driver);
 		PageFactory.initElements(driver, this);
 		}
 	@FindBy(id = "login-error")
@@ -51,6 +55,15 @@ public class LoginPage {
 	}
 	
 	public void login() {
+		logIn.click();
+		testsAccount.click();
+		jdoeLogin.click();
+		loginButton.click();
+		wait.loginSuccessMessage();
+		
+	}
+	
+	public void loginWithValidCredentials() {
 		testsAccount.click();
 		jdoeLogin.click();
 		loginButton.click();
@@ -63,6 +76,7 @@ public class LoginPage {
 	}
 	
 	public boolean loginSuccessFully() {
+		wait.waitForVisible(loginSuccessMessage);
 		 return loginSuccessMessage.isDisplayed();
 	}
 	
