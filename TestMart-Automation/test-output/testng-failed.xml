@@ -3,14 +3,65 @@
 <suite parallel="classes" name="Failed suite [TestMart Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="TestMart Tests(failed)">
     <classes>
+      <class name="tests.ProductTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="openProductPage"/>
+          <include name="addProducts"/>
+        </methods>
+      </class> <!-- tests.ProductTest -->
+      <class name="tests.CreateUserTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="registerNewUser"/>
+          <include name="tearDown"/>
+          <include name="openCreateUserTest"/>
+          <include name="verifyCreateUserPage"/>
+        </methods>
+      </class> <!-- tests.CreateUserTest -->
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="openCheckoutPage"/>
+          <include name="login"/>
+          <include name="reviewOrder"/>
+          <include name="placeOrder"/>
+          <include name="verifyCehckoutPageIsDisplayed"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="openLoginPage"/>
+          <include name="loginWithCorrectCredentials"/>
           <include name="loginWithInvalidCredentials"/>
         </methods>
       </class> <!-- tests.LoginTest -->
+      <class name="tests.OrderConfirmationTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="openOrderPage"/>
+          <include name="verifyOrderIsPlaced"/>
+        </methods>
+      </class> <!-- tests.OrderConfirmationTest -->
+      <class name="tests.CartTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="openCartPage"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="verifyCartProducts"/>
+          <include name="verifyGrandTotalAfterCouponApplied"/>
+          <include name="increaseItemQuantity"/>
+          <include name="applyCoupon"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
     </classes>
   </test> <!-- TestMart Tests(failed) -->
 </suite> <!-- Failed suite [TestMart Suite] -->
