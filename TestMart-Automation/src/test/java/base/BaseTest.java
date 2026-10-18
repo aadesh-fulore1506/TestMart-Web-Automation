@@ -12,8 +12,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
-
+import server.StartTestMart;
 import utils.ConfigReader;
 
 
@@ -25,11 +26,11 @@ public class BaseTest {
 		return driver.get();
 	}
 
-//	@BeforeSuite(alwaysRun = true)
-//	public void startServer() throws Exception {
-//		StartServer server = new StartServer();
-//		server.startServer();
-//	}
+	@BeforeSuite(alwaysRun = true)
+	public void startServer() throws Exception {
+		StartTestMart server = new StartTestMart();
+		server.startServer();
+	}
 
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() {
