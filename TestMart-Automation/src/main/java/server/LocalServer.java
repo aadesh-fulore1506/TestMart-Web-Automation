@@ -11,17 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * Serves the TestMart single-file app over HTTP so Selenium gets a real
- * http:// URL instead of file://.
- *
- * Usage in a @BeforeSuite / @BeforeClass:
- *   LocalServer.start(8080, "src/test/resources/app");
- *   String baseUrl = "http://localhost:8080/testmart.html";
- *
- * Usage in @AfterSuite:
- *   LocalServer.stop();
- */
+
 public final class LocalServer {
 
     private static HttpServer server;
