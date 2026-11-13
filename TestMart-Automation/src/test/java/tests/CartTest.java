@@ -1,9 +1,8 @@
 package tests;
 
-import java.util.Arrays;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.TestMartBaseTest;
@@ -56,6 +55,21 @@ public class CartTest extends TestMartBaseTest {
 		cart.proceedToCheckout();
 	}
 	
+	@DataProvider(name ="Provider")
+	public Object[][] getData(){
+		return new Object[][] {
+			{"admin" , "admin@123"} ,
+			{"employee", "employee123"},
+			{"user" , "user123"}
+		
+		};
+	}
+	@Test(dataProvider="Provider")
+	public void print(String username , String pass) {
+		System.out.println(username);
+		System.out.println(pass);
+		
+	}
 	
 	
 }

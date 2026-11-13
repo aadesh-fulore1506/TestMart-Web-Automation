@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
 	@Test(description ="Login With Invalid Credentials")
 	public void loginWithInvalidCredentials() {
 		loginPage.invalidLogin();
-		Assert.assertTrue(loginPage.loginSuccessFully());
+		Assert.assertFalse(loginPage.loginSuccessFully());
 	}
 	
 	

@@ -28,8 +28,7 @@ public class BaseTest {
 
 	@BeforeSuite(alwaysRun = true)
 	public void startServer() throws Exception {
-		StartTestMart server = new StartTestMart();
-		server.startServer();
+		StartTestMart.startServer();
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -58,6 +57,8 @@ public class BaseTest {
 
 	            ChromeOptions chromeOptions = new ChromeOptions();
 
+	            chromeOptions.addArguments("--remote-allow-origins=*");
+	            chromeOptions.addArguments("--window-size=1920,1080");
 	            Map<String, Object> prefs = new HashMap<>();
 
 	            prefs.put("profile.password_manager_leak_detection", false);
@@ -65,9 +66,6 @@ public class BaseTest {
 	            prefs.put("profile.password_manager_enabled", false);
 
 	            chromeOptions.setExperimentalOption("prefs", prefs);
-
-	            chromeOptions.addArguments("--remote-allow-origins=*");
-	            chromeOptions.addArguments("--window-size=1920,1080");
 
 	            if (headless) {
 	                chromeOptions.addArguments("--headless=new");

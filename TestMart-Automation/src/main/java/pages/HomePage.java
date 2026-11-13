@@ -21,15 +21,6 @@ public class HomePage {
 	
 	Integer[] quantity = {1,2,3,4,5} ;
 	
-	
-	public List<String> productList() {
-		return Arrays.asList(products);
-	}
-	
-	public List<Integer> ProductQuntities() {
-		return Arrays.asList(quantity);
-	}
-	
 	@FindBy(css = "a[data-testid='hero-login']")
 	private WebElement logIn;
 	
@@ -64,4 +55,12 @@ public class HomePage {
 	   public void gotoOrderPage() {
 		   orders.click();
 	   }
+	   
+		public List<String> productList() {
+			return Arrays.asList(products);
+		}
+		
+		public List<Integer> ProductQuntities() {
+			return Arrays.asList(quantity);
+		}
 }
